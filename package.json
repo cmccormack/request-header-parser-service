@@ -4,7 +4,8 @@
   "description": "Service that returns a JSON object containing IP address, language, and OS version from the user's browser.",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
   "repository": {
     "type": "git",

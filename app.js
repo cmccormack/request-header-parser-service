@@ -17,6 +17,7 @@ app.get('/', (req, res) => {
   }
   console.log(req.headers)
   console.log(req.accepts())
+  console.log(req.socket.address())
   res.send('Woo Hoo!')
 })
 
