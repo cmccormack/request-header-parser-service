@@ -10,11 +10,12 @@ app.use(function(req, res, next) {
 })
 
 app.get('/', (req, res) => {
-  const ip = req.headers['x-forwarded-for'] || 
-  req.connection.remoteAddress || 
-  req.socket.remoteAddress ||
-  req.connection.socket.remoteAddress
-  
+
+  let ip = req.connection.remoteAddress
+  if (req.headers['x-forwarded-for']){
+    ip = req.headers['x-forwarded-for'].split(',')[0]
+  }
+
   res.send(ip)
 })
 
