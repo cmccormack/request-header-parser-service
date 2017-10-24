@@ -21,6 +21,7 @@ app.use((req, res, next) => {
 })
 
 app.get('/', (req, res, next) => {
+  res.type('json').status(200)
   res.send(JSON.stringify({ipaddress: ip, language: lang, software: os}))
 })
 
