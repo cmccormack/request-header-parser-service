@@ -1,0 +1,28 @@
+{
+  "name": "request-header-parser-service",
+  "version": "1.0.0",
+  "description": "Service that returns a JSON object containing IP address, language, and OS version from the user's browser.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cmccormack/request-header-parser-service.git"
+  },
+  "keywords": [
+    "Node",
+    "API",
+    "Parser"
+  ],
+  "author": "Christopher McCormack https://mackville.net",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cmccormack/request-header-parser-service/issues"
+  },
+  "homepage": "https://github.com/cmccormack/request-header-parser-service#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  },
+  "devDependencies": {}
+}
