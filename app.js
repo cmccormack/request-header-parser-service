@@ -10,15 +10,12 @@ app.use(function(req, res, next) {
 })
 
 app.get('/', (req, res) => {
-  for (val in req){
-    if (typeof req[val] === 'string'){
-      console.log(`${val}: ${req[val]}`)
-    }
-  }
-  console.log(req.headers)
-  console.log(req.accepts())
-  console.log(req.socket.address())
-  res.send('Woo Hoo!')
+  const ip = req.headers['x-forwarded-for'] || 
+  req.connection.remoteAddress || 
+  req.socket.remoteAddress ||
+  req.connection.socket.remoteAddress
+  
+  res.send(ip)
 })
 
 const server = app.listen(port, () => {
